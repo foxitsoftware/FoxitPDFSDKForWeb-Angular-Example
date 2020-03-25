@@ -18,7 +18,7 @@ Enter `../integratons/angular.js/` inside FoxitPDFSDK for Web, and execute:
   ```sh
   npm i
   ```
-This step will create a `node_modules` folder and download all dependencies, copy the `lib` folder from the root folder to `../integrations/angular/src*, and auto rename it as `foxit-lib`.
+This step will create a `node_modules` folder and download all dependencies, copy the `lib` folder from the root folder to `../integrations/angular/src*, and auto rename it as foxit-lib`.
 
 ### Runnning the example
 
