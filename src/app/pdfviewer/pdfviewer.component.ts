@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, ElementRef } from '@angular/core';
 import license from './license-key';
 import * as UIExtension from '../../foxit-lib/UIExtension.full.js';
+import * as Addons from '../../merged-foxit-addons.js';
 
 @Component({
   selector: 'app-foxitpdfviewer',
@@ -25,19 +26,7 @@ export class PDFViewerComponent implements OnInit {
           }
         },
         renderTo: this.element.nativeElement,
-        addons: [
-          '/foxit-lib/uix-addons/export-form/',
-          '/foxit-lib/uix-addons/file-property/',
-          '/foxit-lib/uix-addons/full-screen/',
-          '/foxit-lib/uix-addons/import-form/',
-          '/foxit-lib/uix-addons/multi-media/',
-          '/foxit-lib/uix-addons/password-protect/',
-          '/foxit-lib/uix-addons/path-objects/',
-          '/foxit-lib/uix-addons/print/',
-          '/foxit-lib/uix-addons/redaction/',
-          '/foxit-lib/uix-addons/text-object/',
-          '/foxit-lib/uix-addons/undo-redo/'
-        ]
+        addons: Addons
       });
   }
 

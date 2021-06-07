@@ -25,6 +25,7 @@ if(!fs.existsSync(externalFontPath)) {
   fs.copySync(externalFontPath, destExternalFontPath);
 }
 
-if(!fs.existsSync(destLicenseFilePath)) {
-  fs.copySync(exampleLicensePath, destLicenseFilePath);
+if(fs.existsSync(destLicenseFilePath)) {
+  fs.removeSync(destLicenseFilePath);
 }
+fs.copySync(exampleLicensePath, destLicenseFilePath);
