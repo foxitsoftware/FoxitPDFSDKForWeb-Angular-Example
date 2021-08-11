@@ -6,7 +6,7 @@
     "update-sdk": "node bin/setup.js",
     "merge-addons": "gulp merge-addons",
     "start": "npm run merge-addons && ng serve",
-    "build": "npm run merge-addons && ng build",
+    "build": "npm run merge-addons && node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng build",
     "test": "npm run merge-addons && ng test",
     "lint": "set NODE_OPTIONS=--max-old-space-size=8192 && ng lint",
     "e2e": "ng e2e"
