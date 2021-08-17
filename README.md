@@ -50,9 +50,13 @@ This integration assumes you have `@Angular/cli` app installed.
 
 ### Basic setup
 
-Let's call the root folder of your exiting project as AngularJS and FoxitPDFSDK for Web as SDK.
+Let's call the root folder of your exiting project as `AngularJS` and FoxitPDFSDK for Web as SDK.
 
-1. Install the lattest version of `@foxitsoftware/foxit-pdf-sdk-for-web-library`. Besides， to correctly referene your fonts lib, you also need to duplicate the `node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/external` folder inside SDK to `src/assets`.
+1. Install the lattest version of `@foxitsoftware/foxit-pdf-sdk-for-web-library`.
+  
+  ```bash
+    npm i -S @foxitsoftware/foxit-pdf-sdk-for-web-library
+  ```
 
 _Inside AngularJS, implement the following:_
 
@@ -197,7 +201,7 @@ this.pdfui = new UIExtension.PDFUI({
 |Modularized|Configure gulp|0|Yes,but should re-merge the addons after modification |
 |allInOne.js|No|1|No|
 
-Note: You can rebuild allInOne.js by using our [Addons merge tools](../addons/introduction.html#how-to-merge-addons)
+Note: You can rebuild allInOne.js by using our [Addons merge tools](http://webviewer-demo.foxitsoftware.com/docs/developer-guide/ui-extension/addons/introduction.html#merge-addons)
 
 ### Running your Application
 
