@@ -13,7 +13,7 @@ module.exports = function (config) {
       require('@angular-devkit/build-angular/plugins/karma')
     ],
     files: [{
-      pattern: './node_modules/@foxitsoftware/foxit-pdf-sdk-for-web/**/*.*',
+      pattern: './node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/**/*.*',
       watched: true,
       included: false,
       served: true

@@ -9,7 +9,7 @@ This example is built for [@angular/cli](https://www.npmjs.com/package/@angular/
 ### Prerequisites
 
 - [Nodejs](https://nodejs.org/en/) and [npm](https://www.npmjs.com)
-- [FoxitPDFSDK for Web](https://developers.foxitsoftware.com/pdf-sdk/Web)
+- [FoxitPDFSDK for Web](https://www.npmjs.com/package/@foxitsoftware/foxit-pdf-sdk-for-web-library)
 
 ### Getting started
 
@@ -115,11 +115,11 @@ _Inside AngularJS, implement the following:_
    }
    ```
 
-### Referencing Addons 
+### Referencing Addons
 
 If you are integrating FoxitPDFSDK for Web into your existing Angular project, you should read this section before continue. You may want to check out [Addons](../addons/introduction.md) for detailed introductions. 
 
-Here we introduce three ways to reference SDK addons for Anguar project, you may choose one of them based on your needs. This [Comparison](#Addons reference methods comparison) will help you to better understand the difference of the three ways and make a choice. 
+Here we introduce three ways to reference SDK addons for Anguar project, you may choose one of them based on your needs. This [Comparison](#Addons reference methods comparison) will help you to better understand the difference of the three ways and make a choice.
 
 #### 1. Reference fragmented addons
 
@@ -137,11 +137,12 @@ this.pdfui = new UIExtension.PDFUI({
 });
 }
 ```
+
 Where `the_path_to_foxit_lib` is the SDK lib folder，the path depends on the assets configuration of angular.json. For details, check out [Basic Setup](#basic-setup).
 
 #### 2. Import modular addons
 
-This method was used by default in the out-of-the-box example for Anguar. 
+This method was used by default in the out-of-the-box example for Anguar.
 
 1. Install
 
