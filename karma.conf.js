@@ -13,13 +13,13 @@ module.exports = function (config) {
       require('@angular-devkit/build-angular/plugins/karma')
     ],
     files: [{
-      pattern: 'src/foxit-lib/**/*.*',
+      pattern: './node_modules/@foxitsoftware/foxit-pdf-sdk-for-web/**/*.*',
       watched: true,
       included: false,
       served: true
     }],
     proxies: {
-      '/foxit-lib/': '/base/src/foxit-lib/'
+      '/foxit-lib/': '/base/node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/'
     },
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser

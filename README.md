@@ -4,7 +4,7 @@ This guide shows two examples for angular. One introduces how to quickly run the
 
 ## Quickly run the out-of-the-box example for Angular  
 
-This example is built for [@angular/cli](https://www.npmjs.com/package/@angular/cli) app. It can be accessed at `../integrations/` inside FoxitPDFSDK for Web package.
+This example is built for [@angular/cli](https://www.npmjs.com/package/@angular/cli) app.
 
 ### Prerequisites
 
@@ -13,13 +13,20 @@ This example is built for [@angular/cli](https://www.npmjs.com/package/@angular/
 
 ### Getting started
 
-Enter `../integratons/angular.js/` inside FoxitPDFSDK for Web, and execute:
+First clone the repository to any location:
 
-```sh
+```bash
+git clone git@github.com:foxitsoftware/FoxitPDFSDKForWeb-Angular-Example.git
+```
+
+Enter `./FoxitPDFSDKForWeb-Angular-Example` and execute:
+
+```bash
+cd ./FoxitPDFSDKForWeb-Angular-Example
 npm i
 ```
 
-This step will create a `node_modules` folder and download all dependencies, copy the `lib` folder from the root folder to `../integrations/angular/src*, and auto rename it as foxit-lib`.
+This step will download all dependencies into `node_modules` folder.
 
 ### Runnning the example
 
@@ -45,7 +52,7 @@ This integration assumes you have `@Angular/cli` app installed.
 
 Let's call the root folder of your exiting project as AngularJS and FoxitPDFSDK for Web as SDK.
 
-1. Find the `lib` folder inside SDK, duplicate it to `AngularJS/src/` and rename it as `foxit-lib`. Besides， to correctly referene your fonts lib, you also need to duplicate the `external` folder inside SDK to `AngularJS/src/foxit-lib/assets`.
+1. Install the lattest version of `@foxitsoftware/foxit-pdf-sdk-for-web-library`. Besides， to correctly referene your fonts lib, you also need to duplicate the `node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/external` folder inside SDK to `src/assets`.
 
 _Inside AngularJS, implement the following:_
 
@@ -58,47 +65,20 @@ _Inside AngularJS, implement the following:_
        "assets": [
          ...,
          {
-           "glob": "**/*",
-           "input": "src/foxit-lib",
-           "output": "/foxit-lib",
-           "ignore": ["PDFViewCtrl.*", "UIExtension.*"]
+            "glob": "**/*",
+            "input": "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib",
+            "output": "/foxit-lib",
+            "ignore": ["PDFViewCtrl.*", "UIExtension.*"]
          }
        ],
       "styles": [
-          "src/foxit-lib/UIExtension.css",
+          "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/UIExtension.css",
           "src/styles.css"
         ],
         "extractCss": true,
         ...
      }
    }
-   "lint": {
-         "builder":...,
-         "options": {
-           "tsConfig": [
-             //existing configuration can remain as they are
-           ],
-           "exclude": [
-             // other dependencies you may have
-             "src/foxit-lib/**/*.*"
-           ]
-         }
-       },
-   ```
-
-1. Update `tsconfig.app.json` to exclude the `"src/foxit-lib/**/*.*"`.
-
-   ```json
-   {
-     ...,
-     "exclude": [
-       ...
-       ...,
-       ...,
-       "src/foxit-lib/**/*.*"
-     ]
-   }
-
    ```
 
 ### Creating components
@@ -168,14 +148,13 @@ This method was used by default in the out-of-the-box example for Anguar.
    ```sh
    npm install -D gulp @foxitsoftware/gulp-merge-addon
    ```
-2. Refer to `/integrations/angular/gulpfile.js` for merging addons with gulp.task.
+
+2. Refer to `gulpfile.js` for merging addons with gulp.task.
 
 3. Update the scripts section in package.json:
 
    ```json
    "scripts": {
-       "postinstall": "npm run update-sdk",
-       "update-sdk": "node bin/setup.js",
        "merge-addons": "gulp merge-addons",
        "start": "npm run merge-addons && ng serve",
        "build": "npm run merge-addons && ng build",
@@ -184,20 +163,22 @@ This method was used by default in the out-of-the-box example for Anguar.
        "e2e": "ng e2e"
    },
    ```
-   This way will automatically merge addons once `npm start` is successfully executed. 
+
+   This way will automatically merge addons once `npm start` is successfully executed.
 
 4. The import method can be seen at `/integrations/angular/src/app/pdfviewer/pdfviewer.component.ts`.
 
 #### 3. Reference allInOne.js
 
-The allInOne.js already combines all addons, that locates in `foxit-lib/uix-addons/`. To refenece this file, open `pdfviewer.component.ts`, and update the code as follows:
+The allInOne.js already combines all addons, that locates in `node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/uix-addons/`. To refenece this file, open `pdfviewer.component.ts`, and update the code as follows:
 
 ```js
 // ...
-import * as UIExtension from 'path/to/foxit-lib/UIExtension.full.js';
-import * as Addons from 'path/to/foxit-lib/uix-addons/allInOne.js';
+import * as UIExtension from '@foxitsoftware/foxit-pdf-sdk-for-web-library/UIExtension.full.js';
+import * as Addons from 'node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/uix-addons/allInOne.js';
 // ...
 ```
+
 Under the ngOnInit(), pass Addons to PDFUI:
 
 ```js

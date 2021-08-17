@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 const mergeAddon = require("@foxitsoftware/gulp-merge-addon");
 
-const addonDirectory = 'src/foxit-lib/uix-addons/'
+const addonDirectory = './node_modules/@foxitsoftware/foxit-pdf-sdk-for-web/lib/uix-addons/'
 
 gulp.task("merge-addons", () => {
     return gulp

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation, ElementRef } from '@angular/core';
 import license from './license-key';
-import * as UIExtension from '../../foxit-lib/UIExtension.full.js';
+import * as UIExtension from '@foxitsoftware/foxit-pdf-sdk-for-web';
 import * as Addons from '../../merged-foxit-addons.js';
 
 @Component({

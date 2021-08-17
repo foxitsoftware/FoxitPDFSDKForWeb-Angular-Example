@@ -24,13 +24,13 @@
               "src/assets",
               {
                 "glob": "**/*",
-                "input": "src/foxit-lib",
+                "input": "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib",
                 "output": "/foxit-lib",
                 "ignore": ["PDFViewCtrl.*", "UIExtension.*"]
               }
             ],
             "styles": [
-              "src/foxit-lib/UIExtension.css",
+              "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css",
               "src/styles.css"
             ],
             "extractCss": true,
@@ -111,8 +111,7 @@
               "e2e/tsconfig.json"
             ],
             "exclude": [
-              "**/node_modules/**",
-              "src/foxit-lib/**"
+              "**/node_modules/**"
             ]
           }
         },
