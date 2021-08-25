@@ -46,7 +46,7 @@ This integration assumes you have `@Angular/cli` app installed.
 
 - [Nodejs](https://nodejs.org/en/) and [npm](https://www.npmjs.com)
 - [@angular/cli](https://www.npmjs.com/package/@angular/cli)
-- [FoxitPDFSDKforWeb](https://developers.foxitsoftware.com/pdf-sdk/Web)
+- [FoxitPDFSDKforWeb](https://developers.foxit.com/products/web/)
 
 ### Basic setup
 
