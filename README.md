@@ -9,7 +9,7 @@ This example is built for [@angular/cli](https://www.npmjs.com/package/@angular/
 ### Prerequisites
 
 - [Nodejs](https://nodejs.org/en/) and [npm](https://www.npmjs.com)
-- [FoxitPDFSDK for Web](https://www.npmjs.com/package/@foxitsoftware/foxit-pdf-sdk-for-web-library)
+- [FoxitPDFSDK for Web](https://developers.foxit.com/products/web/)
 
 ### Getting started
 
