@@ -28,6 +28,8 @@ npm i
 
 This step will download all dependencies into `node_modules` folder.
 
+Besides, to correctly reference your fonts lib, duplicate the `external` folder inside SDK to `src/assets`.
+
 ### Runnning the example
 
 On the shell, execute the following command to start your application:
@@ -118,6 +120,10 @@ _Inside AngularJS, implement the following:_
      height: 1024px;
    }
    ```
+
+### Reference fonts lib
+
+If some text in a PDF document requires a specified font to be rendered correctly, you need to specify a font loading path during initialization. In this example, you can refer to the `fontPath` configuration in `src/app/pdfviewer/pdfviewer.component.ts`. What we need to do is to copy the `external` folder in the SDK to the `src/assets` folder so that the special font can be rendered normally.
 
 ### Referencing Addons
 

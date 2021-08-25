@@ -22,7 +22,7 @@ export class PDFViewerComponent implements OnInit {
           libPath: '/foxit-lib',
           jr: {
             ...license,
-            fontPath: location.origin + '/foxit-lib/assets/external/brotli/'
+            fontPath: location.origin + '/assets/external/brotli/'
           }
         },
         renderTo: this.element.nativeElement,
