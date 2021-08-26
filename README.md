@@ -16,7 +16,7 @@ This example is built for [@angular/cli](https://www.npmjs.com/package/@angular/
 First clone the repository to any location:
 
 ```bash
-git clone git@github.com:foxitsoftware/FoxitPDFSDKForWeb-Angular-Example.git
+git clone https://github.com/foxitsoftware/FoxitPDFSDKForWeb-Angular-Example.git
 ```
 
 Enter `./FoxitPDFSDKForWeb-Angular-Example` and execute:
