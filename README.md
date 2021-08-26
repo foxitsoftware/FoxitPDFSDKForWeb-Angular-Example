@@ -80,7 +80,7 @@ _Inside AngularJS, implement the following:_
          }
        ],
       "styles": [
-          "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/UIExtension.css",
+          "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css",
           "src/styles.css"
         ],
         "extractCss": true,
@@ -187,8 +187,8 @@ The allInOne.js already combines all addons, that locates in `node_modules/@foxi
 
 ```js
 // ...
-import * as UIExtension from '@foxitsoftware/foxit-pdf-sdk-for-web-library/UIExtension.full.js';
-import * as Addons from 'node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/uix-addons/allInOne.js';
+import * as UIExtension from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.full.js';
+import * as Addons from '@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/uix-addons/allInOne.js';
 // ...
 ```
 
