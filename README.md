@@ -60,6 +60,8 @@ Let's call the root folder of your exiting project as `AngularJS` and FoxitPDFSD
     npm i -S @foxitsoftware/foxit-pdf-sdk-for-web-library
   ```
 
+1. Place the `license-key.js` into `./src/app/pdfviewer`. You can find the license information at `SDK/examples/`
+
 _Inside AngularJS, implement the following:_
 
 1. In the `angular.json`, update `architect/build` options of `assets`,`styles` and `extractCss`, and `architect/lint` section.
