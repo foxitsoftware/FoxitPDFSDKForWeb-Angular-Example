@@ -220,3 +220,18 @@ npm start
 ```
 
 Awsome, all are made ready. In your browser, go to <http://localhost:4200> to load your application.
+
+### Notice
+
+Angular 9.0.0 and the later version modified the default tsconfig.json configuration: `strict=true`, you should add the following parameters in `tsconfig.json` to make the example run correctly:
+
+```json
+"compilerOptions": {
+  "allowJs": true,
+  "allowSyntheticDefaultImports": true,
+  "noImplicitAny": false,
+}
+```
+
+For more information, check out: <https://github.com/angular/angular/pull/34798>
+and the changelog: <https://github.com/angular/angular/blob/master/CHANGELOG.md#user-content-900-2020-02-06>
