@@ -2,7 +2,7 @@
   "name": "foxit-pdf-sdk-for-web-angular-example",
   "version": "0.1.0",
   "scripts": {
-    "preinstall": "npm i -S @foxitsoftware/foxit-pdf-sdk-for-web-library@8.2.0",
+    "preinstall": "npm i -S @foxitsoftware/foxit-pdf-sdk-for-web-library",
     "merge-addons": "gulp merge-addons",
     "start": "npm run merge-addons && ng serve",
     "build": "npm run merge-addons && node --max_old_space_size=4096 node_modules/@angular/cli/bin/ng build",
