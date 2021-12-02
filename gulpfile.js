@@ -6,18 +6,7 @@ const addonDirectory = './node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-libr
 gulp.task("merge-addons", () => {
     return gulp
         .src([
-          addonDirectory + 'export-form/addon.info.json',
-          addonDirectory + 'file-property/addon.info.json',
-          addonDirectory + 'full-screen/addon.info.json',
-          addonDirectory + 'import-form/addon.info.json',
-          addonDirectory + 'multi-media/addon.info.json',
-          addonDirectory + 'password-protect/addon.info.json',
-          addonDirectory + 'path-objects/addon.info.json',
-          addonDirectory + 'print/addon.info.json',
-          addonDirectory + 'redaction/addon.info.json',
-          addonDirectory + 'text-object/addon.info.json',
-          addonDirectory + 'undo-redo/addon.info.json',
-          addonDirectory + 'thumbnail/addon.info.json'
+          addonDirectory + '*/addon.info.json'
         ])
         .pipe(
             mergeAddon({

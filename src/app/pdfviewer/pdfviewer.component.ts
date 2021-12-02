@@ -25,6 +25,7 @@ export class PDFViewerComponent implements OnInit {
             fontPath: location.origin + '/assets/external/brotli/'
           }
         },
+        appearance: UIExtension.appearances.adaptive,
         renderTo: this.element.nativeElement,
         addons: Addons
       });
