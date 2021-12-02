@@ -34,7 +34,9 @@
               "src/styles.css"
             ],
             "extractCss": true,
-            "scripts": []
+            "scripts": [
+              "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/adaptive.js"
+            ]
           },
           "configurations": {
             "production": {
