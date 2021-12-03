@@ -26,7 +26,7 @@
                 "glob": "**/*",
                 "input": "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib",
                 "output": "/foxit-lib",
-                "ignore": ["PDFViewCtrl.*", "UIExtension.*"]
+                "ignore": ["PDFViewCtrl.js", "PDFViewCtrl.{vendor,polyfills}.js", "UIExtension.*"]
               }
             ],
             "styles": [
