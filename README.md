@@ -52,6 +52,13 @@ This integration assumes you have `@Angular/cli` app installed.
 
 ### Basic setup
 
+1. Generating and serving an Angular project via a development server
+
+  ```bash
+    ng new my-angular-app
+    cd my-angular-app
+  ```
+
 Let's call the root folder of your exiting project as `AngularJS` and FoxitPDFSDK for Web as SDK.
 
 1. Install the lattest version of `@foxitsoftware/foxit-pdf-sdk-for-web-library`.
@@ -59,8 +66,6 @@ Let's call the root folder of your exiting project as `AngularJS` and FoxitPDFSD
   ```bash
     npm i -S @foxitsoftware/foxit-pdf-sdk-for-web-library
   ```
-
-1. Place the `license-key.js` into `./src/app/pdfviewer`. You can find the license information at `SDK/examples/`
 
 _Inside AngularJS, implement the following:_
 
@@ -76,7 +81,7 @@ _Inside AngularJS, implement the following:_
             "glob": "**/*",
             "input": "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib",
             "output": "/foxit-lib",
-            "ignore": ["PDFViewCtrl.*", "UIExtension.*"]
+            "ignore": ["PDFViewCtrl.js", "PDFViewCtrl.{vendor,polyfills}.js", "UIExtension.*"]
          }
        ],
       "styles": [
@@ -89,6 +94,13 @@ _Inside AngularJS, implement the following:_
    }
    ```
 
+> **NOTE:**
+> https://angular.io/cli/build
+>
+>--extract-css
+>
+>Deprecated: Deprecated since version 11.0. No longer required to disable CSS extraction for HMR. Extract CSS from global styles into '.css' files instead of '.js'.
+
 ### Creating components
 
 1. In AngularJS, run
@@ -99,9 +111,9 @@ _Inside AngularJS, implement the following:_
 
    This step will create `pdfviewer`folder and related component files under `AngularJS/src/app`. Now, you need to implement the followings in `AngularJS/src/app/`.
 
-1. Place the `license-key.js` into `../pdfviewer/`. You can find the license information at `SDK/examples/`.
-1. Update `../pdfviewer/component.ts`. For configuration details, refer to the counterpart file inside SDK.
-1. Update `../component.html` to pass a DOM element for placing web viewer.
+1. Place the `license-key.js` into `src/app/pdfviewer/`. You can find the license information at `SDK/examples/`.
+1. Update `src/app/pdfviewer/component.ts`. For configuration details, refer to the counterpart file inside SDK.
+1. Update `src/app/app.component.html` to pass a DOM element for placing web viewer.
 
    ```html
    <div>
@@ -179,7 +191,7 @@ This method was used by default in the out-of-the-box example for Anguar.
 
    This way will automatically merge addons once `npm start` is successfully executed.
 
-4. The import method can be seen at `/integrations/angular/src/app/pdfviewer/pdfviewer.component.ts`.
+4. The import method can be seen at `src/app/pdfviewer/pdfviewer.component.ts`.
 
 #### 3. Reference allInOne.js
 
