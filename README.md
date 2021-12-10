@@ -112,7 +112,7 @@ _Inside AngularJS, implement the following:_
    This step will create `pdfviewer`folder and related component files under `AngularJS/src/app`. Now, you need to implement the followings in `AngularJS/src/app/`.
 
 1. Place the `license-key.js` into `src/app/pdfviewer/`. You can find the license information at `SDK/examples/`.
-1. Update `src/app/pdfviewer/component.ts`. For configuration details, refer to the counterpart file inside SDK.
+1. Update `src/app/pdfviewer/pdfviewer.component.ts`. For configuration details, refer to the counterpart file inside SDK.
 1. Update `src/app/app.component.html` to pass a DOM element for placing web viewer.
 
    ```html
@@ -124,7 +124,7 @@ _Inside AngularJS, implement the following:_
    </div>
    ```
 
-1. Update `component.css` to make it look as what you preferred.
+1. Update `pdfviewer.component.css` to make it look as what you preferred.
 
    ```css
    .foxit-pdf-viewer-container {
