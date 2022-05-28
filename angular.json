@@ -31,6 +31,7 @@
               }
             ],
             "styles": [
+              "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css",
               "src/styles.css"
             ],
             "extractCss": true,
@@ -71,11 +72,15 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "websdk-angular-boilerplate:build"
+            "browserTarget": "websdk-angular-boilerplate:build",
+            "host": "0.0.0.0",
+            "disableHostCheck": true
           },
           "configurations": {
             "production": {
-              "browserTarget": "websdk-angular-boilerplate:build:production"
+              "browserTarget": "websdk-angular-boilerplate:build:production",
+              "host": "0.0.0.0",
+              "disableHostCheck": true
             }
           }
         },

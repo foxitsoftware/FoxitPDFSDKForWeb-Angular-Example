@@ -85,6 +85,7 @@ _Inside AngularJS, implement the following:_
          }
        ],
       "styles": [
+          "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css",
           "src/styles.css"
         ],
         "extractCss": true,
@@ -118,15 +119,10 @@ _Inside AngularJS, implement the following:_
    <div>
      <app-foxitpdfviewer
        #pdfviewer
+       id="pdf-ui"
        class="foxit-pdf-viewer-container"
      ></app-foxitpdfviewer>
    </div>
-   ```
-
-1. Update `pdfviewer.component.css` to make it look as what you preferred.
-
-   ```css
-   @import url('@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css');
    ```
 
 1. Update `app.component.css` to make it look as what you preferred
