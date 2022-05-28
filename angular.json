@@ -19,6 +19,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
+            "optimization": false,
             "assets": [
               "src/favicon.ico",
               "src/assets",
@@ -30,7 +31,6 @@
               }
             ],
             "styles": [
-              "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css",
               "src/styles.css"
             ],
             "extractCss": true,

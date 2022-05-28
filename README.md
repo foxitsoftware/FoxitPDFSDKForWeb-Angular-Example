@@ -85,7 +85,6 @@ _Inside AngularJS, implement the following:_
          }
        ],
       "styles": [
-          "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css",
           "src/styles.css"
         ],
         "extractCss": true,
@@ -127,13 +126,24 @@ _Inside AngularJS, implement the following:_
 1. Update `pdfviewer.component.css` to make it look as what you preferred.
 
    ```css
-   .foxit-pdf-viewer-container {
-     display: block;
-     margin: 0 auto;
-     width: 1280px;
-     height: 1024px;
-   }
+   @import url('@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css');
    ```
+
+1. Update `app.component.css` to make it look as what you preferred
+
+  ```css
+  .foxit-pdf-viewer-container {
+    display: block;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+  }
+  .foxit-pdf-viewer-app {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  ```
 
 ### Reference fonts lib
 
