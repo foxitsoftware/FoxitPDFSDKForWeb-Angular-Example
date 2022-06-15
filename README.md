@@ -149,7 +149,7 @@ If some text in a PDF document requires a specified font to be rendered correctl
 
 If you are integrating FoxitPDFSDK for Web into your existing Angular project, you should read this section before continue. You may want to check out [Addons](../addons/introduction.md) for detailed introductions. 
 
-Here we introduce three ways to reference SDK addons for Anguar project, you may choose one of them based on your needs. This [Comparison](#Addons reference methods comparison) will help you to better understand the difference of the three ways and make a choice.
+Here we introduce three ways to reference SDK addons for Angular project, you may choose one of them based on your needs. This [Comparison](#Addons reference methods comparison) will help you to better understand the difference of the three ways and make a choice. If you need to run multiple instances, see the third method.
 
 #### 1. Reference fragmented addons
 
@@ -172,7 +172,7 @@ Where `the_path_to_foxit_lib` is the SDK lib folder，the path depends on the as
 
 #### 2. Import modular addons
 
-This method was used by default in the out-of-the-box example for Anguar.
+This method was used by default in the out-of-the-box example for Angular.
 
 1. Install
 
