@@ -87,19 +87,11 @@ _Inside AngularJS, implement the following:_
       "styles": [
           "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css",
           "src/styles.css"
-        ],
-        "extractCss": true,
+        ]
         ...
      }
    }
    ```
-
-> **NOTE:**
-> https://angular.io/cli/build
->
->--extract-css
->
->Deprecated: Deprecated since version 11.0. No longer required to disable CSS extraction for HMR. Extract CSS from global styles into '.css' files instead of '.js'.
 
 ### Creating components
 
