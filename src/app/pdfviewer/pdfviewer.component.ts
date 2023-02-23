@@ -27,7 +27,7 @@ export class PDFViewerComponent implements OnInit {
         },
         appearance: UIExtension.appearances.adaptive,
         renderTo: this.element.nativeElement,
-        addons: Addons
+        addons: Addons as unknown as UIExtension.UIXAddon[]
       });
   }
 
