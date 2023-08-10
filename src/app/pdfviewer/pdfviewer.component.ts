@@ -27,7 +27,9 @@ export class PDFViewerComponent implements OnInit {
         },
         appearance: UIExtension.appearances.adaptive,
         renderTo: this.element.nativeElement,
-        addons: Addons as unknown as UIExtension.UIXAddon[]
+        addons: UIExtension.PDFViewCtrl.DeviceInfo.isMobile ?
+          '/foxit-lib/uix-addons/allInOne.mobile.js' :
+          '/foxit-lib/uix-addons/allInOne.js'
       });
   }
 

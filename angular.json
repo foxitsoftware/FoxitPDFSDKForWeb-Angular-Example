@@ -18,7 +18,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "optimization": false,
             "assets": [
               "src/favicon.ico",
@@ -34,7 +34,6 @@
               "node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/lib/UIExtension.css",
               "src/styles.css"
             ],
-            "extractCss": true,
             "scripts": []
           },
           "configurations": {
@@ -48,7 +47,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -134,5 +132,8 @@
         }
       }
     }},
-  "defaultProject": "websdk-angular-boilerplate"
+  "defaultProject": "websdk-angular-boilerplate",
+  "cli": {
+    "analytics": "3e79e2c2-7079-4781-91ec-6d98bfe06532"
+  }
 }
