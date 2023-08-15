@@ -141,7 +141,7 @@ If some text in a PDF document requires a specified font to be rendered correctl
 
 If you are integrating FoxitPDFSDK for Web into your existing Angular project, you should read this section before continue. You may want to check out [Addons](../addons/introduction.md) for detailed introductions. 
 
-Here we introduce three ways to reference SDK addons for Angular project, you may choose one of them based on your needs. This [Comparison](#Addons reference methods comparison) will help you to better understand the difference of the three ways and make a choice. If you need to run multiple instances, see the third method.
+Here we introduce three ways to reference SDK addons for Angular project, you may choose one of them based on your needs. This [Comparison](#Addons reference methods comparison) will help you to better understand the difference of the three ways and make a choice. If you need to run multiple instances, see the second method.
 
 #### 1. Reference fragmented addons
 
@@ -162,36 +162,7 @@ this.pdfui = new UIExtension.PDFUI({
 
 Where `the_path_to_foxit_lib` is the SDK lib folder，the path depends on the assets configuration of angular.json. For details, check out [Basic Setup](#basic-setup).
 
-#### 2. Import modular addons
-
-This method was used by default in the out-of-the-box example for Angular.
-
-1. Install
-
-   ```sh
-   npm install -D gulp @foxitsoftware/gulp-merge-addon
-   ```
-
-2. Refer to `gulpfile.js` for merging addons with gulp.task.
-
-3. Update the scripts section in package.json:
-
-   ```json
-   "scripts": {
-       "merge-addons": "gulp merge-addons",
-       "start": "npm run merge-addons && ng serve",
-       "build": "npm run merge-addons && ng build",
-       "test": "npm run merge-addons && ng test",
-       "lint": "set NODE_OPTIONS=--max-old-space-size=8192 && ng lint",
-       "e2e": "ng e2e"
-   },
-   ```
-
-   This way will automatically merge addons once `npm start` is successfully executed.
-
-4. The import method can be seen at `src/app/pdfviewer/pdfviewer.component.ts`.
-
-#### 3. Reference allInOne.js
+#### 2. Reference allInOne.js
 
 The allInOne.js already combines all addons, that locates in `node_modules/@foxitsoftware/foxit-pdf-sdk-for-web-library/uix-addons/`. To refenece this file, open `pdfviewer.component.ts`, and update the code as follows:
 
