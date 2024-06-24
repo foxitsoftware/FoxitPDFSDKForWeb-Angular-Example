@@ -23,11 +23,6 @@ export class PDFViewerComponent implements OnInit {
             ...license,
             fontPath: location.origin + '/assets/external/brotli/'
           },
-          messageSyncServiceWorker: {
-            options:{
-                scope: '/foxit-lib/'
-            }
-          }
         },
         appearance: UIExtension.appearances.adaptive,
         renderTo: this.element.nativeElement,

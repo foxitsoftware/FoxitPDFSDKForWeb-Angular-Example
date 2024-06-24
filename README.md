@@ -192,6 +192,38 @@ this.pdfui = new UIExtension.PDFUI({
 
 Note: You can rebuild allInOne.js by using our [Addons merge tools](http://webviewer-demo.foxitsoftware.com/docs/developer-guide/ui-extension/addons/introduction.html#merge-addons)
 
+### Reference the `Service-Worker-Allowed` HTTP header
+
+Starting from FoxitPDFSDK for Web version `10.0.0`, since service worker is used, it is necessary to add this field in the HTTP response header of the Service Worker script. Its value is the maximum allowed scope path:
+
+```http
+Service-Worker-Allowed /;
+```
+
+#### Nginx
+
+If you are using Nginx as your server, you can add the `Service-Worker-Allowed` response header by modifying the Nginx configuration file. Below is an example configuration：
+
+```nginx
+server {
+    location /sw.js {
+        add_header Service-Worker-Allowed /;
+    }
+}
+```
+
+#### Dev Server
+
+In local development, you can add `Service-Worker-Allowed` response headers to `projects.websdk-angular-boilerplate.architect.serve.options` in `angular.json` file. The following is a configuration example：
+
+```json
+{
+   "headers": {
+      "Service-Worker-Allowed": "/"
+   }
+}
+```
+
 ### Running your Application
 
 On the Shell, run

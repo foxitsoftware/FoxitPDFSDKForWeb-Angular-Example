@@ -72,7 +72,10 @@
           "options": {
             "browserTarget": "websdk-angular-boilerplate:build",
             "host": "0.0.0.0",
-            "disableHostCheck": true
+            "disableHostCheck": true,
+            "headers": {
+              "Service-Worker-Allowed": "/"
+            }
           },
           "configurations": {
             "production": {
