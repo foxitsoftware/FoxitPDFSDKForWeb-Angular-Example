@@ -103,6 +103,8 @@ _Inside AngularJS, implement the following:_
 
    This step will create `pdfviewer`folder and related component files under `AngularJS/src/app`. Now, you need to implement the followings in `AngularJS/src/app/`.
 
+   > **Note.** `ng generate component PDFViewer` produces the prefix `app-pdf-viewer`. The code below and `app.component.html` rely on the selector `app-foxitpdfviewer`, so set `selector: 'app-foxitpdfviewer'` in `src/app/pdfviewer/pdfviewer.component.ts`. Otherwise the component won't mount in the template.
+
 1. Place the `license-key.js` into `src/app/pdfviewer/`. You can find the license information at `SDK/examples/`.
 1. Update `src/app/pdfviewer/pdfviewer.component.ts`. For configuration details, refer to the counterpart file inside SDK.
 1. Update `src/app/app.component.html` to pass a DOM element for placing web viewer.
@@ -236,15 +238,18 @@ Awsome, all are made ready. In your browser, go to <http://localhost:4200> to l
 
 ### Notice
 
-Angular 9.0.0 and the later version modified the default tsconfig.json configuration: `strict=true`, you should add the following parameters in `tsconfig.json` to make the example run correctly:
+Angular 9.0.0 and the later versions set `strict=true` by default, which stops the compilation because the SDK's `lib/index.d.ts` contains several implicitly-typed declarations (e.g. `error TS7006` / `error TS7008`). To make the example compile, disable the strict type-checking in `tsconfig.json` (and optionally set `noImplicitAny` to `false` as a safety net):
 
 ```json
 "compilerOptions": {
-  "allowJs": true,
-  "allowSyntheticDefaultImports": true,
+  "strict": false,
   "noImplicitAny": false,
+  "allowJs": true,
+  "allowSyntheticDefaultImports": true
 }
 ```
+
+> **Note.** Since the example removes the strict flags, the SDK's bundled `license-key.js` is imported as-is. With `allowJs: true`, the `./license-key.js` import is accepted without a separate `.d.ts` declaration.
 
 For more information, check out: <https://github.com/angular/angular/pull/34798>
 and the changelog: <https://github.com/angular/angular/blob/master/CHANGELOG.md#user-content-900-2020-02-06>
