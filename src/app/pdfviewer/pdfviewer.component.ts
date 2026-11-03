@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation, ElementRef } from '@angular/core';
 import license from './license-key.js';
 import * as UIExtension from '@foxitsoftware/foxit-pdf-sdk-for-web-library';
 
@@ -8,7 +8,7 @@ import * as UIExtension from '@foxitsoftware/foxit-pdf-sdk-for-web-library';
   styleUrls: ['./pdfviewer.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class PDFViewerComponent implements OnInit {
+export class PDFViewerComponent implements OnInit, OnDestroy {
 
   pdfui: any;
   constructor(
@@ -30,6 +30,12 @@ export class PDFViewerComponent implements OnInit {
           '/foxit-lib/uix-addons/allInOne.mobile.js' :
           '/foxit-lib/uix-addons/allInOne.js'
       });
+      window['pdfui'] = this.pdfui;
+  }
+
+  ngOnDestroy() {
+      this.pdfui.destroy();
+      window['pdfui'] = null;
   }
 
 }
